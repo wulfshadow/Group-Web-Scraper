@@ -5,7 +5,7 @@
 -Sam Laos\
 -Weston Baker\
 -Alex Marx\
--Hailey Hillison\
+-Hailey Hillison
 
 ## Input:
 
