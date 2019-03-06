@@ -9,8 +9,8 @@
 - Jack Kay
 
 ## 🔢 Input:
-- 
-- 
+- Sam Laos
+- Liam Means
 ## ✨ Magic Happens:
 - Alex Marx
 - Weston Baker
