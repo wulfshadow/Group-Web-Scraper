@@ -8,7 +8,7 @@
 - Hailey Hillison
 - Jack Kay
 
-## Input:
+## 🔢 Input:
 - 
 - 
 ## 🥞 Magic Happens:
