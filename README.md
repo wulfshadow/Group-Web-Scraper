@@ -9,6 +9,6 @@
 ## Input:
 
 ## Magic Happens:
-Alex Marx\
+Alex Marx
 
 ## Output:
