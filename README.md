@@ -6,6 +6,7 @@
 - Weston Baker
 - Alex Marx
 - Hailey Hillison
+-Jack Kay
 
 ## Input:
 - 
