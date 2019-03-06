@@ -5,3 +5,10 @@
 -Sam Laos\
 -Weston Baker\
 -Alex Marx
+
+## Input:
+
+##Magic Happens:
+Alex Marx\
+
+##Output:
