@@ -9,11 +9,13 @@
 - Jack Kay
 
 ## 🔢 Input:
-- Sam Laos
-- Liam Means
+- Jack"The Cool Guy"Kay
+- heyleh
+
 ## ✨ Magic Happens:
 - Alex Marx
 - Weston Baker
+
 ## 💬 Output:
-- Jack"The Cool Guy"Kay
-- heyleh
+- Sam Laos
+- Liam Means
