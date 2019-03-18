@@ -12,7 +12,7 @@ while True:
         
         message = client.messages \
             .create(
-                body='Filler Message Wow!',
+                body='Something has changed',
                 from_= twilio_number,
                 to= user_number
             )
