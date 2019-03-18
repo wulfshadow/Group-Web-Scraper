@@ -20,3 +20,5 @@ while True:
             )
         current_text = page_text
     time.sleep(wait_duration)
+
+# Loop!
