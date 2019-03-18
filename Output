@@ -1,4 +1,4 @@
-# We need these variables (or at least similar vars)
+# We need these variables (or at least similar vars):
 # page_text (original page)
 # get_text (to compare)
 # twilio_number
