@@ -9,10 +9,6 @@
 input things
 
 while True:
-    page_text = get_text()
-    if(current_text != page_text):
-        print("Changed")
-        
         message = client.messages \
             .create(
                 body='Something has changed',
