@@ -1,1 +1,20 @@
+// We need these variables (or at least similar vars)
+// page_text (original page)
+// get_text (to compare)
+// twilio_number
+// user_number
+// wait_duration
 
+while True:
+    page_text = get_text()
+    if(current_text != page_text):
+        print("Changed")
+        
+        message = client.messages \
+            .create(
+                body='Filler Message Wow!',
+                from_= twilio_number,
+                to= user_number
+            )
+        current_text = page_text
+    time.sleep(wait_duration)
