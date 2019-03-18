@@ -1,1 +1,29 @@
+#Alex's code
+seq1 = "abcdefgaaaaaaa"
+seq2 = "ajcrefg"
+
+'''
+Get length of strings
+Subtract string 1 from string 2
+if difference is greater than 0 add that many 'a' to the end of string 2
+if difference is less than 0 add that many 'a' to the end of string 1
+run following code
+'''
+
+count = sum(1 for a, b in zip(seq1, seq2) if a != b)
+ print(count)
+
+charnumbstr1 = 0
+for char in seq1:
+	charnumbstr1 += 1     # same as result = result + 1
+print(charnumbstr1)
+
+charnumbstr2 = 0
+for char in seq2:
+	charnumbstr2 += 1     # same as result = result + 1
+print(charnumbstr2)
+
+strdiff = charnumbstr1 - charnumbstr2
+print (strdiff)
+
 
