@@ -1,9 +1,9 @@
-// We need these variables (or at least similar vars)
-// page_text (original page)
-// get_text (to compare)
-// twilio_number
-// user_number
-// wait_duration
+# We need these variables (or at least similar vars)
+# page_text (original page)
+# get_text (to compare)
+# twilio_number
+# user_number
+# wait_duration
 
 while True:
     page_text = get_text()
