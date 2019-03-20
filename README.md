@@ -1,5 +1,7 @@
 # Group-Web-Scraper
 
+This is a group project for school. We need to create a group web scraper that compares two files to see if they differ.
+
 ## 👥 Names of all group members!
 - Liam Means
 - Sam Laos
