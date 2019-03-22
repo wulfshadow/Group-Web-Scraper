@@ -11,7 +11,7 @@ input things
 while True:
         message = client.messages \
             .create(
-                body='Something has changed',
+                body='Something has changed', # add var strdiff to verify what changed?
                 from_= twilio_number,
                 to= user_number
             )
