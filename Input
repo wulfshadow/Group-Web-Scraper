@@ -1,1 +1,5 @@
-
+ID1 = Auth Token
+ID2 = Acount SID
+URL = Website to be scraped
+PN1 = Your phone number
+PN 2= Twillio Phone Number
