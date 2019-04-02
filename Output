@@ -3,12 +3,14 @@
 # get_text (to compare)
 # twilio_number
 # user_number
+# check_number
 # wait_duration
 # client
+# reply_if_false
 
 input things
 
-while True:
+if change = true {
         message = client.messages \
             .create(
                 body='Something has changed', # add var strdiff to verify what changed?
@@ -16,6 +18,25 @@ while True:
                 to= user_number
             )
         current_text = page_text
+    if check_number - 1 <= 0 { break }
+    check_number -- # check to see if this works
     time.sleep(wait_duration)
-
-# Loop!
+    
+} elif reply_if_false = true {
+        message = client.messages \
+            .create(
+                body='Something has changed', # add var strdiff to verify what changed?
+                from_= twilio_number,
+                to= user_number
+            )
+        current_text = page_text
+    if check_number - 1 <= 0 { break }
+    check_number -- # check to see if this works
+    time.sleep(wait_duration)
+    }
+} else {
+    current_text = page_text
+    if check_number - 1 <= 0 { break }
+    check_number -- # check to see if this works
+    time.sleep(wait_duration)
+}
