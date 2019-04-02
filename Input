@@ -1,5 +1,7 @@
-ID1 = Auth Token
-ID2 = Acount SID
+Auth = Auth Token
+SID = Acount SID
 URL = Website to be scraped
 PN1 = Your phone number
-PN 2= Twillio Phone Number
+PN2= Twillio Phone Number
+Time = Time between check
+Checks = Amount of Checks
