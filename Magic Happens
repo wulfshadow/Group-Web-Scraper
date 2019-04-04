@@ -26,4 +26,26 @@ print(charnumbstr2)
 strdiff = charnumbstr1 - charnumbstr2
 print (strdiff)
 
+#Weston's code
+if (count > 3):
+	#twilio stuff
+	print("Updated")
 
+elif (strdiff > 3 or strdiff < -3):
+	#twilio stuff
+	print("Updated")
+	
+elif ((count == 3 && strdiff == 1) or (count == 3 && strdiff == -1)):
+	#twilio stuff
+	print("Updated")
+	
+elif ((count == 1 && strdiff == 3) or (count == 1 && strdiff == -3)):
+	#twilio stuff
+	print("Updated")
+	
+elif ((count == 2 && strdiff == 2) or (count == 2 && strdiff == -2)):
+	#twilio stuff
+	print("Updated")
+	
+else:
+	print("No Update")
