@@ -1,4 +1,3 @@
-#Alex's code
 seq1 = "abcdefgaaaaaaa"
 seq2 = "ajcrefg"
 
@@ -26,7 +25,6 @@ print(charnumbstr2)
 strdiff = charnumbstr1 - charnumbstr2
 print (strdiff)
 
-#Weston's code
 if (count > 3):
 	#twilio stuff
 	print("Updated")
