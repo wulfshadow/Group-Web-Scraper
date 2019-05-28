@@ -4,4 +4,4 @@ URL = web_url
 HomePH = user_number
 TwilPH= twilio_number
 Time/Check = wait_duration
-TotalChecks = amount_checks
+TotalChecks = check_number
