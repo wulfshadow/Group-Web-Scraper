@@ -24,7 +24,3 @@ Input group! Please add code to the input section!
 ## 💬 Output:
 - Sam Laos
 - Liam Means
-
-## Traitors (Left the group)
-- Weston Baker
-- Alex Marx
