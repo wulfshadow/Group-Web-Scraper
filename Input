@@ -1,16 +1,7 @@
 Auth = auth_token
 SID = acct_number
 URL = web_url
-PN1 = user_number
-PN2= twilio_number
-Time = time_wait
-Checks = Amount of Checks
-# We need these variables (or at least similar vars):
-# page_text (original page)
-# get_text (to compare)
-# twilio_number
-
-# check_number
-# wait_duration
-# client
-# reply_if_false
+HomePH = user_number
+TwilPH= twilio_number
+Time/Check = time_wait
+TotalChecks = amount_checks
