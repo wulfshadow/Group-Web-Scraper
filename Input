@@ -3,5 +3,5 @@ SID = acct_number
 URL = web_url
 HomePH = user_number
 TwilPH= twilio_number
-Time/Check = time_wait
+Time/Check = wait_duration
 TotalChecks = amount_checks
