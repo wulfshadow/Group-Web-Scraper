@@ -27,23 +27,23 @@ print (strdiff)
 
 if (count > 3):
 	#twilio stuff
-	print("Updated")
+	update = 1
 
 elif (strdiff > 3 or strdiff < -3):
 	#twilio stuff
-	print("Updated")
+	update = 1
 	
 elif ((count == 3 && strdiff == 1) or (count == 3 && strdiff == -1)):
 	#twilio stuff
-	print("Updated")
+	update = 1
 	
 elif ((count == 1 && strdiff == 3) or (count == 1 && strdiff == -3)):
 	#twilio stuff
-	print("Updated")
+	update = 1
 	
 elif ((count == 2 && strdiff == 2) or (count == 2 && strdiff == -2)):
 	#twilio stuff
-	print("Updated")
+	update = 1
 	
 else:
-	print("No Update")
+	update = 0
