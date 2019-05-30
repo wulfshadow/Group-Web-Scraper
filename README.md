@@ -24,3 +24,9 @@ Input group! Please add code to the input section!
 ## 💬 Output:
 - Sam Laos
 - Liam Means
+
+## Code combiners
+- Sam Laos
+- Hailey Hillison
+- Liam Means
+- Jack Kay
