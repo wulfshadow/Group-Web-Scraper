@@ -1,0 +1,72 @@
+import bs4
+from bs4 import BeautifulSoup
+import requests
+import html2text
+import time
+from twilio.rest import Client
+
+page_link = "https://wulfshadow.github.io/Holiday-Contest/"
+
+client = Client(acct_sid, auth_token)
+
+def get_text():
+    page_response = requests.get(page_link, timeout=5)
+    page_content = BeautifulSoup(page_response.content, "html.parser")
+    text = str(page_content)
+    raw_text = html2text.html2text(text)
+    return(raw_text)
+
+current_text = get_text()
+
+count = sum(1 for a, b in zip(seq1, seq2) if a != b)
+ print(count)
+
+charnumbstr1 = 0
+for char in seq1:
+	charnumbstr1 += 1     # same as result = result + 1
+print(charnumbstr1)
+
+charnumbstr2 = 0
+for char in seq2:
+	charnumbstr2 += 1     # same as result = result + 1
+print(charnumbstr2)
+
+strdiff = charnumbstr1 - charnumbstr2
+print (strdiff)
+
+if (count > 3):
+	#twilio stuff
+	update = 1
+
+elif (strdiff > 3 or strdiff < -3):
+	#twilio stuff
+	update = 1
+	
+elif ((count == 3 && strdiff == 1) or (count == 3 && strdiff == -1)):
+	#twilio stuff
+	update = 1
+	
+elif ((count == 1 && strdiff == 3) or (count == 1 && strdiff == -3)):
+	#twilio stuff
+	update = 1
+	
+elif ((count == 2 && strdiff == 2) or (count == 2 && strdiff == -2)):
+	#twilio stuff
+	update = 1
+	
+else:
+	update = 0
+
+while True:
+    page_text = get_text()
+    if(current_text != page_text):
+        print("Changed")
+        
+        message = client.messages \
+            .create(
+                body='Something has changed on Holiday-Contest!',
+                from_= twilio_number,
+                to= my_number
+            )
+        current_text = page_text
+    time.sleep(10)
