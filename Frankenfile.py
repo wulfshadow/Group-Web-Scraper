@@ -29,3 +29,19 @@ if(waitTime < 3):
 
 getTimesChecked = input("Number of searches:")
 timesChecked = int(getTimesChecked)
+
+
+
+while True:
+    page_text = get_text()
+    if(current_text != page_text):
+        print("Changed")
+        
+        message = client.messages \
+            .create(
+                body='Something has changed on Holiday-Contest!',
+                from_= twilio_number,
+                to= my_number
+            )
+        current_text = page_text
+    time.sleep(10)
