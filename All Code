@@ -27,74 +27,78 @@ def get_text():
     return(raw_text)
 
 # HOW DO WE GET FROM raw_text TO WHAT IS BELOW?
+# 1. 
+# 2. Turn raw_text into a string
+# 3. 
 
 # Compare strings
 
-count = sum(1 for a, b in zip(seq1, seq2) if a != b)
-print(count)
-
-charnumbstr1 = 0 # character number string 1
-for char in seq1:
-	charnumbstr1 += 1     # same as result = result + 1
-print(charnumbstr1)
-
-charnumbtr2 = 0 # character number string 2
-for char in seq2:
-	charnumbstr2 += 1     # same as result = result + 1
-print(charnumbstr2)
-
-strdiff = charnumbstr1 - charnumbstr2
-print (strdiff)
-
-if (count > 3):
-	#twilio stuff
-	update = 1
-
-elif (strdiff > 3 or strdiff < -3):
-	#twilio stuff
-	update = 1
+	count = sum(1 for a, b in zip(seq1, seq2) if a != b)
+	print(count)
 	
-elif ((count == 3 && strdiff == 1) or (count == 3 && strdiff == -1)):
-	#twilio stuff
-	update = 1
+	charnumbstr1 = 0 # character number string 1
+	for char in seq1:
+		charnumbstr1 += 1     # same as result = result + 1
+	print(charnumbstr1)
 	
-elif ((count == 1 && strdiff == 3) or (count == 1 && strdiff == -3)):
-	#twilio stuff
-	update = 1
+	charnumbtr2 = 0 # character number string 2
+	for char in seq2:
+		charnumbstr2 += 1     # same as result = result + 1
+	print(charnumbstr2)
 	
-elif ((count == 2 && strdiff == 2) or (count == 2 && strdiff == -2)):
-	#twilio stuff
-	update = 1
+	strdiff = charnumbstr1 - charnumbstr2
+	print (strdiff)
 	
-else:
-	update = 0
-
-    if change = true {
-        message = client.messages \
-            .create(
-                body='Something has changed', # add var strdiff to verify what changed?
-                from_= twilio_number,
-                to= user_number
-            )
-        current_text = page_text
-    if check_number - 1 <= 0 { break }
-    check_number -- # check to see if this works
-    time.sleep(wait_duration)
-    
-} elif reply_if_false = true {
-        message = client.messages \
-            .create(
-                body='Something has changed', # add var strdiff to verify what changed?
-                from_= twilio_number,
-                to= user_number
-            )
-        current_text = page_text
-    if check_number - 1 <= 0 { break }
-    check_number -- # check to see if this works
-    time.sleep(wait_duration)
-} else {
-    current_text = page_text
-    if check_number - 1 <= 0 { break }
-    check_number -- # check to see if this works
-    time.sleep(wait_duration)
+	if (count > 3):
+		#twilio stuff
+		update = 1
+	
+	elif (strdiff > 3 or strdiff < -3):
+		#twilio stuff
+		update = 1
+		
+	elif ((count == 3 && strdiff == 1) or (count == 3 && strdiff == -1)):
+		#twilio stuff
+		update = 1
+		
+	elif ((count == 1 && strdiff == 3) or (count == 1 && strdiff == -3)):
+		#twilio stuff
+		update = 1
+		
+	elif ((count == 2 && strdiff == 2) or (count == 2 && strdiff == -2)):
+		#twilio stuff
+		update = 1
+		
+	else:
+		update = 0
+	
+if change = true {
+	message = client.messages \
+		.create(
+			body='Something has changed', # add var strdiff to verify what changed?
+			from_= twilio_number,
+			to= user_number
+    	)
+	current_text = page_text
+	if check_number - 1 <= 0 { break }
+	check_number -- # check to see if this works
+	time.sleep(wait_duration)
+}
+elif reply_if_false = true {
+	message = client.messages \
+		.create(
+			body='Something has changed', # add var strdiff to verify what changed?
+			from_= twilio_number,
+			to= user_number
+		)
+	current_text = page_text
+	if check_number - 1 <= 0 { break }
+	check_number -- # check to see if this works
+	time.sleep(wait_duration)
+}
+else {
+	current_text = page_text
+	if check_number - 1 <= 0 { break }
+		check_number -- # check to see if this works
+		time.sleep(wait_duration)
 }
