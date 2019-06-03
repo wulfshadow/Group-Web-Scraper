@@ -26,13 +26,7 @@ def get_text():
     raw_text = html2text.html2text(text)
     return(raw_text)
 
-# HOW DO WE GET FROM raw_text TO WHAT IS BELOW?
-# 1. 
-# 2. Turn raw_text into a string
-# 3. 
-
-# Compare strings
-
+def banana():
 	count = sum(1 for a, b in zip(seq1, seq2) if a != b)
 	print(count)
 	
@@ -72,33 +66,33 @@ def get_text():
 	else:
 		update = 0
 	
-if change = true {
-	message = client.messages \
-		.create(
-			body='Something has changed', # add var strdiff to verify what changed?
-			from_= twilio_number,
-			to= user_number
-    	)
-	current_text = page_text
-	if check_number - 1 <= 0 { break }
-	check_number -- # check to see if this works
-	time.sleep(wait_duration)
-}
-elif reply_if_false = true {
-	message = client.messages \
-		.create(
-			body='Something has changed', # add var strdiff to verify what changed?
-			from_= twilio_number,
-			to= user_number
-		)
-	current_text = page_text
-	if check_number - 1 <= 0 { break }
-	check_number -- # check to see if this works
-	time.sleep(wait_duration)
-}
-else {
-	current_text = page_text
-	if check_number - 1 <= 0 { break }
+	if update = 1 {
+		message = client.messages \
+			.create(
+				body='Something has changed', # add var strdiff to verify what changed?
+				from_= twilio_number,
+				to= user_number
+    		)
+		current_text = page_text
+		if check_number - 1 <= 0 { break }
 		check_number -- # check to see if this works
 		time.sleep(wait_duration)
-}
+	}
+	# elif reply_if_false = True {
+	#	message = client.messages \
+	#		.create(
+	#			body='Something has changed', # add var strdiff to verify what changed?
+	#			from_= twilio_number,
+	#			to= user_number
+	#		)
+	#	current_text = page_text
+	#	if check_number - 1 <= 0 { break }
+	#	check_number -- # check to see if this works
+	#	time.sleep(wait_duration)
+	#}
+	else {
+		current_text = page_text
+		if check_number - 1 <= 0 { break }
+			check_number -- # check to see if this works
+			time.sleep(wait_duration)
+	}
