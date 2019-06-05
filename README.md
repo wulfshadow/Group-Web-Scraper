@@ -1,4 +1,5 @@
 # Group Web Scraper
+(Note: the "All Code" file is the final working scraper.)
 
 This is a group project for school. We need to create a group web scraper that compares two files to see if they differ.
 
