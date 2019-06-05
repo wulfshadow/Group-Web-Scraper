@@ -4,7 +4,7 @@
 This is a group project for school. We need to create a group web scraper that compares two files to see if they differ.
 
 ## Things to do
-The code needs to work on a Raspberry Pi.
+The code **needs** to work on a Raspberry Pi.
 
 ## 👥 Names of all group members!
 - Liam Means
