@@ -1,98 +1,86 @@
-# Import
-import bs4
-from bs4 import BeautifulSoup
-import requests
-import html2text
-import time
-from twilio.rest import Client
-
-# Site and Twilio Info
-page_link = "https://github.com/wulfshadow/Group-Web-Scraper"
-
-client = Client(acct_number, auth_token)
-
-# Time intervals
-get_wait_duration = input("Number of seconds between searches:")
-wait_duration=(get_wait_duration)
-# Num of searches
-get_check_number = input("Number of searches:")
-check_number = int(get_check_number)
-
-# Scrape the website (Get strings)
 def get_text():
-    page_response = requests.get(page_link, timeout=5)
+    page_response = requests.get(pageLink, timeout=5)
     page_content = BeautifulSoup(page_response.content, "html.parser")
     text = str(page_content)
-    raw_text = html2text.html2text(text)
-    return(raw_text)
+    rawText = html2text.html2text(text)
+    return(str(rawText))
 
-def banana():
-	count = sum(1 for a, b in zip(seq1, seq2) if a != b)
-	print(count)
-	
-	charnumbstr1 = 0 # character number string 1
-	for char in seq1:
-		charnumbstr1 += 1     # same as result = result + 1
-	print(charnumbstr1)
-	
-	charnumbtr2 = 0 # character number string 2
-	for char in seq2:
-		charnumbstr2 += 1     # same as result = result + 1
-	print(charnumbstr2)
-	
-	strdiff = charnumbstr1 - charnumbstr2
-	print (strdiff)
-	
-	if (count > 3):
-		#twilio stuff
-		update = 1
-	
-	elif (strdiff > 3 or strdiff < -3):
-		#twilio stuff
-		update = 1
-		
-	elif ((count == 3 && strdiff == 1) or (count == 3 && strdiff == -1)):
-		#twilio stuff
-		update = 1
-		
-	elif ((count == 1 && strdiff == 3) or (count == 1 && strdiff == -3)):
-		#twilio stuff
-		update = 1
-		
-	elif ((count == 2 && strdiff == 2) or (count == 2 && strdiff == -2)):
-		#twilio stuff
-		update = 1
-		
-	else:
-		update = 0
-	
-	if update = 1 {
-		message = client.messages \
-			.create(
-				body='Something has changed', # add var strdiff to verify what changed?
-				from_= twilio_number,
-				to= user_number
-    		)
-		current_text = page_text
-		if check_number - 1 <= 0 { break }
-		check_number -- # check to see if this works
-		time.sleep(wait_duration)
-	}
-	# elif reply_if_false = True {
-	#	message = client.messages \
-	#		.create(
-	#			body='Something has changed', # add var strdiff to verify what changed?
-	#			from_= twilio_number,
-	#			to= user_number
-	#		)
-	#	current_text = page_text
-	#	if check_number - 1 <= 0 { break }
-	#	check_number -- # check to see if this works
-	#	time.sleep(wait_duration)
-	#}
-	else {
-		current_text = page_text
-		if check_number - 1 <= 0 { break }
-			check_number -- # check to see if this works
-			time.sleep(wait_duration)
-	}
+# Save initial soup
+page_response = requests.get(pageLink, timeout=5)
+page_content = BeautifulSoup(page_response.content, "html.parser")
+text = str(page_content)
+rawText = html2text.html2text(text)
+initScrape = str(rawText)
+
+# Get time intervals
+getWaitTime = input("Number of seconds between searches:")
+waitTime = int(getWaitTime)
+
+# Will it spam the server too much?
+if(waitTime < 3):
+    waitTime = 3
+    print("Number of seconds too low. Three seconds chosen.")
+
+getTimesChecked = input("Number of searches:")
+timesChecked = int(getTimesChecked)
+
+# MAGIC
+
+
+while (timesChecked - 1 > 0):
+    page_text = get_text()
+    if (initScrape != page_text):
+        print("Changed")
+        
+        message = client.messages \
+            .create(
+                body='Something has changed!',
+                from_= twilio_number,
+                to= my_number
+            )
+        initScrape = page_text
+    timesChecked -= 1
+    time.sleep(waitTime)
+
+# Getting client info and the soup
+client = Client(acct_sid, auth_token)
+pageLink = input("Enter a URL:")
+def get_text():
+    page_response = requests.get(pageLink, timeout=5)
+    page_content = BeautifulSoup(page_response.content, "html.parser")
+    text = str(page_content)
+    rawText = html2text.html2text(text)
+    return(rawText)
+
+# Save initial soup
+initScrape = str(rawText)
+
+# Get time intervals
+getWaitTime = input("Number of seconds between searches:")
+waitTime = int(getWaitTime)
+
+# Will it spam the server too much?
+if(waitTime < 3):
+    waitTime = 3
+    print("Number of seconds too low. Three seconds chosen.")
+
+getTimesChecked = input("Number of searches:")
+timesChecked = int(getTimesChecked)
+
+# MAGIC
+
+while (timesChecked - 1 > 0):
+    page_text = get_text()
+    if (current_text != page_text):
+        print("Changed")
+        
+        message = client.messages \
+            .create(
+                body='Something has changed!',
+                from_= twilio_number,
+                to= my_number
+            )
+        current_text = page_text
+    print("Checked")
+    timesChecked -= 1
+    time.sleep(waitTime)
