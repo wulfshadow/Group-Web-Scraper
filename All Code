@@ -1,3 +1,14 @@
+import bs4
+from bs4 import BeautifulSoup
+import requests
+import html2text
+import time
+from varscraper import *
+from twilio.rest import Client
+
+# Getting client info and the soup
+client = Client(acct_sid, auth_token)
+pageLink = input("Enter a URL:")
 def get_text():
     page_response = requests.get(pageLink, timeout=5)
     page_content = BeautifulSoup(page_response.content, "html.parser")
@@ -68,6 +79,8 @@ getTimesChecked = input("Number of searches:")
 timesChecked = int(getTimesChecked)
 
 # MAGIC
+
+current_text = page_text
 
 while (timesChecked - 1 > 0):
     page_text = get_text()
