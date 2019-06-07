@@ -37,7 +37,6 @@ timesChecked = int(getTimesChecked)
 
 # MAGIC
 
-
 while (timesChecked - 1 > 0):
     page_text = get_text()
     if (initScrape != page_text):
